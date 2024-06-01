@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Résultat du Traitement{% endblock %}
+{% block content %}
+<div class="mt-5" data-aos="fade-up">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-image"></i> Résultat</h2>
+                </div>
+                <div class="card-body text-center">
+                    {% if result_url %}
+                        <img src="{{ result_url }}" alt="Image traitée" class="img-fluid border rounded" style="max-width: 100%;">
+                    {% else %}
+                        <p>Aucune image traitée à afficher.</p>
+                    {% endif %}
+                    <br><br>
+                    <a href="/" class="btn btn-secondary"><i class="fas fa-upload"></i> Télécharger une autre image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
